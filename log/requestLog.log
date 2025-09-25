@@ -1,0 +1,1196 @@
+INFO: 2025/09/15 18:16:04 send.go:34: 请求方法: GET
+INFO: 2025/09/15 18:16:04 send.go:35: 请求URL: https://httpbin.org/get
+INFO: 2025/09/15 18:16:04 send.go:36: 请求头: map[Content-Type:[application/json] Key:[value]]
+INFO: 2025/09/15 18:16:04 send.go:43: 请求体: {"user":"xxx"}
+INFO: 2025/09/15 18:16:04 send.go:49: 响应状态码: 200
+INFO: 2025/09/15 18:16:04 send.go:50: 响应体: {
+  "args": {}, 
+  "headers": {
+    "Accept-Encoding": "gzip", 
+    "Content-Length": "14", 
+    "Content-Type": "application/json", 
+    "Host": "httpbin.org", 
+    "Key": "value", 
+    "User-Agent": "Go-http-client/2.0", 
+    "X-Amzn-Trace-Id": "Root=1-68c7e763-7cffffd04aacbf353d7a7ca4"
+  }, 
+  "origin": "112.224.157.13", 
+  "url": "https://httpbin.org/get"
+}
+
+INFO: 2025/09/15 21:13:45 send.go:19: 请求发送失败: Get "https://httpbin.org/get": dial tcp: lookup httpbin.org: no such host
+INFO: 2025/09/15 21:14:05 send.go:19: 请求发送失败: Delete "https://httpbin.org/delete": dial tcp: lookup httpbin.org: no such host
+INFO: 2025/09/15 21:14:31 send.go:19: 请求发送失败: Post "https://httpbin.org/post": dial tcp: lookup httpbin.org: no such host
+INFO: 2025/09/15 21:15:44 send.go:19: 请求发送失败: Post "https://httpbin.org/post": dial tcp: lookup httpbin.org: no such host
+INFO: 2025/09/15 21:17:21 send.go:34: 请求方法: POST
+INFO: 2025/09/15 21:17:21 send.go:35: 请求URL: https://httpbin.org/post
+INFO: 2025/09/15 21:17:21 send.go:36: 请求头: map[Content-Type:[application/json] Key:[test]]
+INFO: 2025/09/15 21:17:21 send.go:43: 请求体: {"user":"xxx"}
+INFO: 2025/09/15 21:17:21 send.go:49: 响应状态码: 200
+INFO: 2025/09/15 21:17:21 send.go:50: 响应体: {
+  "args": {}, 
+  "data": "{\"user\":\"xxx\"}", 
+  "files": {}, 
+  "form": {}, 
+  "headers": {
+    "Accept-Encoding": "gzip", 
+    "Content-Length": "14", 
+    "Content-Type": "application/json", 
+    "Host": "httpbin.org", 
+    "Key": "test", 
+    "User-Agent": "Go-http-client/2.0", 
+    "X-Amzn-Trace-Id": "Root=1-68c811df-4eb1ab2928c03bb47d190f05"
+  }, 
+  "json": {
+    "user": "xxx"
+  }, 
+  "origin": "112.224.157.13", 
+  "url": "https://httpbin.org/post"
+}
+
+INFO: 2025/09/15 21:27:32 send.go:34: 请求方法: POST
+INFO: 2025/09/15 21:27:32 send.go:35: 请求URL: https://httpbin.org/post
+INFO: 2025/09/15 21:27:32 send.go:36: 请求头: map[Content-Type:[application/json] Key:[test]]
+INFO: 2025/09/15 21:27:32 send.go:43: 请求体: {"user":"xxx"}
+INFO: 2025/09/15 21:27:32 send.go:49: 响应状态码: 200
+INFO: 2025/09/15 21:27:32 send.go:50: 响应体: {
+  "args": {}, 
+  "data": "{\"user\":\"xxx\"}", 
+  "files": {}, 
+  "form": {}, 
+  "headers": {
+    "Accept-Encoding": "gzip", 
+    "Content-Length": "14", 
+    "Content-Type": "application/json", 
+    "Host": "httpbin.org", 
+    "Key": "test", 
+    "User-Agent": "Go-http-client/2.0", 
+    "X-Amzn-Trace-Id": "Root=1-68c8143d-47623a8a64e6ee385d125da7"
+  }, 
+  "json": {
+    "user": "xxx"
+  }, 
+  "origin": "112.224.157.13", 
+  "url": "https://httpbin.org/post"
+}
+
+INFO: 2025/09/20 14:29:56 send.go:87: 
+===== 请求汇总日志 =====
+请求方法: POST
+请求URL: https://httpbin.org/post
+请求头: map[Content-Type:[application/json] Key:[test]]
+请求体: {"user":"徐华强"}
+总请求数: 100
+成功: 1, 失败: 99
+去重后的响应结果:
+  状态码: 400, 响应体: <html>
+<head><title>400 Bad Request</title></head>
+<body>
+<center><h1>400 Bad Request</h1></center>
+</body>
+</html>
+
+  状态码: 200, 响应体: {
+  "args": {}, 
+  "data": "{\"user\":\"\u5f90\u534e\u5f3a\"}", 
+  "files": {}, 
+  "form": {}, 
+  "headers": {
+    "Accept-Encoding": "gzip", 
+    "Content-Length": "20", 
+    "Content-Type": "application/json", 
+    "Host": "httpbin.org", 
+    "Key": "test", 
+    "User-Agent": "Go-http-client/2.0", 
+    "X-Amzn-Trace-Id": "Root=1-68ce49e5-0493868171d2e1875f3a3824"
+  }, 
+  "json": {
+    "user": "\u5f90\u534e\u5f3a"
+  }, 
+  "origin": "223.104.196.141", 
+  "url": "https://httpbin.org/post"
+}
+
+===== 汇总结束 =====
+
+INFO: 2025/09/20 14:32:11 send.go:87: 
+===== 请求汇总日志 =====
+请求方法: POST
+请求URL: https://httpbin.org/post
+请求头: map[Content-Type:[application/json] Key:[test]]
+请求体: {"user":"徐华强"}
+总请求数: 100
+成功: 1, 失败: 99
+去重后的响应结果:
+  状态码: 400, 响应体: <html>
+<head><title>400 Bad Request</title></head>
+<body>
+<center><h1>400 Bad Request</h1></center>
+</body>
+</html>
+
+  状态码: 200, 响应体: {
+  "args": {}, 
+  "data": "{\"user\":\"\u5f90\u534e\u5f3a\"}", 
+  "files": {}, 
+  "form": {}, 
+  "headers": {
+    "Accept-Encoding": "gzip", 
+    "Content-Length": "20", 
+    "Content-Type": "application/json", 
+    "Host": "httpbin.org", 
+    "Key": "test", 
+    "User-Agent": "Go-http-client/2.0", 
+    "X-Amzn-Trace-Id": "Root=1-68ce4a6d-2244db76531a3fb6567befb9"
+  }, 
+  "json": {
+    "user": "\u5f90\u534e\u5f3a"
+  }, 
+  "origin": "223.104.196.141", 
+  "url": "https://httpbin.org/post"
+}
+
+===== 汇总结束 =====
+
+INFO: 2025/09/20 14:33:17 send.go:87: 
+===== 请求汇总日志 =====
+请求方法: POST
+请求URL: https://httpbin.org/post
+请求头: map[Content-Type:[application/json] Key:[test]]
+请求体: {"user":"123"}
+总请求数: 100
+成功: 1, 失败: 99
+去重后的响应结果:
+  状态码: 400, 响应体: <html>
+<head><title>400 Bad Request</title></head>
+<body>
+<center><h1>400 Bad Request</h1></center>
+</body>
+</html>
+
+  状态码: 200, 响应体: {
+  "args": {}, 
+  "data": "{\"user\":\"123\"}", 
+  "files": {}, 
+  "form": {}, 
+  "headers": {
+    "Accept-Encoding": "gzip", 
+    "Content-Length": "14", 
+    "Content-Type": "application/json", 
+    "Host": "httpbin.org", 
+    "Key": "test", 
+    "User-Agent": "Go-http-client/2.0", 
+    "X-Amzn-Trace-Id": "Root=1-68ce4aaf-7e1d50ac150d7e377e497309"
+  }, 
+  "json": {
+    "user": "123"
+  }, 
+  "origin": "223.104.196.141", 
+  "url": "https://httpbin.org/post"
+}
+
+===== 汇总结束 =====
+
+INFO: 2025/09/20 14:35:10 send.go:87: 
+===== 请求汇总日志 =====
+请求方法: POST
+请求URL: https://httpbin.org/post
+请求头: map[Content-Type:[application/json] Key:[test]]
+请求体: {"user":"123"}
+总请求数: 1
+成功: 1, 失败: 0
+去重后的响应结果:
+  状态码: 200, 响应体: {
+  "args": {}, 
+  "data": "{\"user\":\"123\"}", 
+  "files": {}, 
+  "form": {}, 
+  "headers": {
+    "Accept-Encoding": "gzip", 
+    "Content-Length": "14", 
+    "Content-Type": "application/json", 
+    "Host": "httpbin.org", 
+    "Key": "test", 
+    "User-Agent": "Go-http-client/2.0", 
+    "X-Amzn-Trace-Id": "Root=1-68ce4b20-6be203102325c035529647ba"
+  }, 
+  "json": {
+    "user": "123"
+  }, 
+  "origin": "223.104.196.141", 
+  "url": "https://httpbin.org/post"
+}
+
+===== 汇总结束 =====
+
+INFO: 2025/09/20 14:39:07 send.go:87: 
+===== 请求汇总日志 =====
+请求方法: POST
+请求URL: localhost:8085/aaa
+请求头: map[Content-Type:[application/json] Key:[test]]
+请求体: {"user":"123"}
+总请求数: 1
+成功: 0, 失败: 1
+去重后的响应结果:
+  错误: 发送请求失败: Post "localhost:8085/aaa": unsupported protocol scheme "localhost"
+===== 汇总结束 =====
+
+INFO: 2025/09/20 14:40:29 send.go:87: 
+===== 请求汇总日志 =====
+请求方法: POST
+请求URL: http://localhost:8085/aaa
+请求头: map[Content-Type:[application/json] Key:[test]]
+请求体: {"user":"123"}
+总请求数: 1
+成功: 1, 失败: 0
+去重后的响应结果:
+  状态码: 200, 响应体: {"test":"success"}
+===== 汇总结束 =====
+
+INFO: 2025/09/20 14:40:39 send.go:87: 
+===== 请求汇总日志 =====
+请求方法: POST
+请求URL: http://localhost:8085/aaa
+请求头: map[Content-Type:[application/json] Key:[test]]
+请求体: {"user":"123"}
+总请求数: 10
+成功: 6, 失败: 4
+去重后的响应结果:
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": http: ContentLength=14 with Body length 0
+  状态码: 200, 响应体: {"test":"success"}
+===== 汇总结束 =====
+
+INFO: 2025/09/20 15:55:06 send.go:87: 
+===== 请求汇总日志 =====
+请求方法: POST
+请求URL: http://localhost:8085/aaa
+请求头: map[Content-Type:[application/json] Key:[test]]
+请求体: {"user":"123"}
+总请求数: 10
+成功: 1, 失败: 9
+去重后的响应结果:
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": http: ContentLength=14 with Body length 0
+  状态码: 200, 响应体: {"test":"success"}
+===== 汇总结束 =====
+
+INFO: 2025/09/20 15:55:11 send.go:87: 
+===== 请求汇总日志 =====
+请求方法: POST
+请求URL: http://localhost:8085/aaa
+请求头: map[Content-Type:[application/json] Key:[test]]
+请求体: {"user":"123"}
+总请求数: 10
+成功: 3, 失败: 7
+去重后的响应结果:
+  状态码: 200, 响应体: {"test":"success"}
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": http: ContentLength=14 with Body length 0
+===== 汇总结束 =====
+
+INFO: 2025/09/20 15:55:12 send.go:87: 
+===== 请求汇总日志 =====
+请求方法: POST
+请求URL: http://localhost:8085/aaa
+请求头: map[Content-Type:[application/json] Key:[test]]
+请求体: {"user":"123"}
+总请求数: 10
+成功: 5, 失败: 5
+去重后的响应结果:
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": http: ContentLength=14 with Body length 0
+  状态码: 200, 响应体: {"test":"success"}
+===== 汇总结束 =====
+
+INFO: 2025/09/20 15:55:15 send.go:87: 
+===== 请求汇总日志 =====
+请求方法: POST
+请求URL: http://localhost:8085/aaa
+请求头: map[Content-Type:[application/json] Key:[test]]
+请求体: {"user":"123"}
+总请求数: 10
+成功: 5, 失败: 5
+去重后的响应结果:
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": http: ContentLength=14 with Body length 0
+  状态码: 200, 响应体: {"test":"success"}
+===== 汇总结束 =====
+
+INFO: 2025/09/20 15:55:16 send.go:87: 
+===== 请求汇总日志 =====
+请求方法: POST
+请求URL: http://localhost:8085/aaa
+请求头: map[Content-Type:[application/json] Key:[test]]
+请求体: {"user":"123"}
+总请求数: 10
+成功: 6, 失败: 4
+去重后的响应结果:
+  状态码: 200, 响应体: {"test":"success"}
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": http: ContentLength=14 with Body length 0
+===== 汇总结束 =====
+
+INFO: 2025/09/20 15:55:17 send.go:87: 
+===== 请求汇总日志 =====
+请求方法: POST
+请求URL: http://localhost:8085/aaa
+请求头: map[Content-Type:[application/json] Key:[test]]
+请求体: {"user":"123"}
+总请求数: 10
+成功: 5, 失败: 5
+去重后的响应结果:
+  状态码: 200, 响应体: {"test":"success"}
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": http: ContentLength=14 with Body length 0
+===== 汇总结束 =====
+
+INFO: 2025/09/20 16:02:40 send.go:92: 
+===== 请求汇总日志 =====
+请求方法: POST
+请求URL: http://localhost:8085/aaa
+请求头: map[Content-Type:[application/json] Key:[test]]
+请求体: {"user":"123"}
+总请求数: 10
+成功: 10, 失败: 0
+去重后的响应结果:
+  状态码: 200, 响应体: {"test":"success"}
+===== 汇总结束 =====
+
+INFO: 2025/09/20 16:03:10 send.go:92: 
+===== 请求汇总日志 =====
+请求方法: POST
+请求URL: http://localhost:8085/aaa
+请求头: map[Content-Type:[application/json] Key:[test]]
+请求体: {"user":"123"}
+总请求数: 100
+成功: 100, 失败: 0
+去重后的响应结果:
+  状态码: 200, 响应体: {"test":"success"}
+===== 汇总结束 =====
+
+INFO: 2025/09/20 16:03:15 send.go:92: 
+===== 请求汇总日志 =====
+请求方法: POST
+请求URL: http://localhost:8085/aaa
+请求头: map[Content-Type:[application/json] Key:[test]]
+请求体: {"user":"123"}
+总请求数: 1000
+成功: 844, 失败: 156
+去重后的响应结果:
+  状态码: 200, 响应体: {"test":"success"}
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": dial tcp [::1]:8085: connectex: No connection could be made because the target machine actively refused it.
+===== 汇总结束 =====
+
+INFO: 2025/09/20 16:04:29 send.go:92: 
+===== 请求汇总日志 =====
+请求方法: POST
+请求URL: http://localhost:8085/aaa
+请求头: map[Content-Type:[application/json] Key:[test]]
+请求体: {"user":"123"}
+总请求数: 1000
+成功: 499, 失败: 501
+去重后的响应结果:
+  状态码: 200, 响应体: {"test":"success"}
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": dial tcp [::1]:8085: connectex: No connection could be made because the target machine actively refused it.
+===== 汇总结束 =====
+
+INFO: 2025/09/20 16:04:41 send.go:92: 
+===== 请求汇总日志 =====
+请求方法: POST
+请求URL: http://localhost:8085/aaa
+请求头: map[Content-Type:[application/json] Key:[test]]
+请求体: {"user":"123"}
+总请求数: 1000
+成功: 553, 失败: 447
+去重后的响应结果:
+  状态码: 200, 响应体: {"test":"success"}
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": dial tcp [::1]:8085: connectex: No connection could be made because the target machine actively refused it.
+===== 汇总结束 =====
+
+INFO: 2025/09/20 16:04:43 send.go:92: 
+===== 请求汇总日志 =====
+请求方法: POST
+请求URL: http://localhost:8085/aaa
+请求头: map[Content-Type:[application/json] Key:[test]]
+请求体: {"user":"123"}
+总请求数: 1000
+成功: 610, 失败: 390
+去重后的响应结果:
+  状态码: 200, 响应体: {"test":"success"}
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": dial tcp [::1]:8085: connectex: No connection could be made because the target machine actively refused it.
+===== 汇总结束 =====
+
+INFO: 2025/09/20 16:04:44 send.go:92: 
+===== 请求汇总日志 =====
+请求方法: POST
+请求URL: http://localhost:8085/aaa
+请求头: map[Content-Type:[application/json] Key:[test]]
+请求体: {"user":"123"}
+总请求数: 1000
+成功: 621, 失败: 379
+去重后的响应结果:
+  状态码: 200, 响应体: {"test":"success"}
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": dial tcp [::1]:8085: connectex: No connection could be made because the target machine actively refused it.
+===== 汇总结束 =====
+
+INFO: 2025/09/20 16:04:45 send.go:92: 
+===== 请求汇总日志 =====
+请求方法: POST
+请求URL: http://localhost:8085/aaa
+请求头: map[Content-Type:[application/json] Key:[test]]
+请求体: {"user":"123"}
+总请求数: 1000
+成功: 783, 失败: 217
+去重后的响应结果:
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": dial tcp [::1]:8085: connectex: No connection could be made because the target machine actively refused it.
+  状态码: 200, 响应体: {"test":"success"}
+===== 汇总结束 =====
+
+INFO: 2025/09/20 16:04:46 send.go:92: 
+===== 请求汇总日志 =====
+请求方法: POST
+请求URL: http://localhost:8085/aaa
+请求头: map[Content-Type:[application/json] Key:[test]]
+请求体: {"user":"123"}
+总请求数: 1000
+成功: 820, 失败: 180
+去重后的响应结果:
+  状态码: 200, 响应体: {"test":"success"}
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": dial tcp [::1]:8085: connectex: No connection could be made because the target machine actively refused it.
+===== 汇总结束 =====
+
+INFO: 2025/09/20 16:04:47 send.go:92: 
+===== 请求汇总日志 =====
+请求方法: POST
+请求URL: http://localhost:8085/aaa
+请求头: map[Content-Type:[application/json] Key:[test]]
+请求体: {"user":"123"}
+总请求数: 1000
+成功: 775, 失败: 225
+去重后的响应结果:
+  状态码: 200, 响应体: {"test":"success"}
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": dial tcp [::1]:8085: connectex: No connection could be made because the target machine actively refused it.
+===== 汇总结束 =====
+
+INFO: 2025/09/20 16:08:34 send.go:94: 
+===== 请求汇总日志 =====
+请求方法: POST
+请求URL: http://localhost:8085/aaa
+请求头: map[Content-Type:[application/json] Key:[test]]
+请求体: {"user":"123"}
+总请求数: 1000
+成功: 594, 失败: 406
+去重后的响应结果:
+  状态码: 200, 响应体: {"test":"success"}
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": dial tcp [::1]:8085: connectex: No connection could be made because the target machine actively refused it.
+===== 汇总结束 =====
+
+INFO: 2025/09/20 16:08:39 send.go:94: 
+===== 请求汇总日志 =====
+请求方法: POST
+请求URL: http://localhost:8085/aaa
+请求头: map[Content-Type:[application/json] Key:[test]]
+请求体: {"user":"123"}
+总请求数: 1000
+成功: 789, 失败: 211
+去重后的响应结果:
+  状态码: 200, 响应体: {"test":"success"}
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": dial tcp [::1]:8085: connectex: No connection could be made because the target machine actively refused it.
+===== 汇总结束 =====
+
+INFO: 2025/09/20 16:08:40 send.go:94: 
+===== 请求汇总日志 =====
+请求方法: POST
+请求URL: http://localhost:8085/aaa
+请求头: map[Content-Type:[application/json] Key:[test]]
+请求体: {"user":"123"}
+总请求数: 1000
+成功: 615, 失败: 385
+去重后的响应结果:
+  状态码: 200, 响应体: {"test":"success"}
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": dial tcp [::1]:8085: connectex: No connection could be made because the target machine actively refused it.
+===== 汇总结束 =====
+
+INFO: 2025/09/20 16:11:22 send.go:97: 
+===== 请求汇总日志 =====
+请求方法: POST
+请求URL: http://localhost:8085/aaa
+请求头: map[Content-Type:[application/json] Key:[test]]
+请求体: {"user":"123"}
+总请求数: 1000
+成功: 886, 失败: 114
+去重后的响应结果:
+  状态码: 200, 响应体: {"test":"success"}
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": dial tcp [::1]:8085: connectex: No connection could be made because the target machine actively refused it.
+===== 汇总结束 =====
+
+INFO: 2025/09/20 16:11:25 send.go:97: 
+===== 请求汇总日志 =====
+请求方法: POST
+请求URL: http://localhost:8085/aaa
+请求头: map[Content-Type:[application/json] Key:[test]]
+请求体: {"user":"123"}
+总请求数: 1000
+成功: 941, 失败: 59
+去重后的响应结果:
+  状态码: 200, 响应体: {"test":"success"}
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": dial tcp [::1]:8085: connectex: No connection could be made because the target machine actively refused it.
+===== 汇总结束 =====
+
+INFO: 2025/09/20 16:11:26 send.go:97: 
+===== 请求汇总日志 =====
+请求方法: POST
+请求URL: http://localhost:8085/aaa
+请求头: map[Content-Type:[application/json] Key:[test]]
+请求体: {"user":"123"}
+总请求数: 1000
+成功: 957, 失败: 43
+去重后的响应结果:
+  状态码: 200, 响应体: {"test":"success"}
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": dial tcp [::1]:8085: connectex: No connection could be made because the target machine actively refused it.
+===== 汇总结束 =====
+
+INFO: 2025/09/20 16:11:27 send.go:97: 
+===== 请求汇总日志 =====
+请求方法: POST
+请求URL: http://localhost:8085/aaa
+请求头: map[Content-Type:[application/json] Key:[test]]
+请求体: {"user":"123"}
+总请求数: 1000
+成功: 581, 失败: 419
+去重后的响应结果:
+  状态码: 200, 响应体: {"test":"success"}
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": dial tcp [::1]:8085: connectex: No connection could be made because the target machine actively refused it.
+===== 汇总结束 =====
+
+INFO: 2025/09/20 16:11:42 send.go:97: 
+===== 请求汇总日志 =====
+请求方法: POST
+请求URL: http://localhost:8085/aaa
+请求头: map[Content-Type:[application/json] Key:[test]]
+请求体: {"user":"123"}
+总请求数: 1000
+成功: 968, 失败: 32
+去重后的响应结果:
+  状态码: 200, 响应体: {"test":"success"}
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": dial tcp [::1]:8085: connectex: No connection could be made because the target machine actively refused it.
+===== 汇总结束 =====
+
+INFO: 2025/09/20 16:11:44 send.go:97: 
+===== 请求汇总日志 =====
+请求方法: POST
+请求URL: http://localhost:8085/aaa
+请求头: map[Content-Type:[application/json] Key:[test]]
+请求体: {"user":"123"}
+总请求数: 1000
+成功: 963, 失败: 37
+去重后的响应结果:
+  状态码: 200, 响应体: {"test":"success"}
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": dial tcp [::1]:8085: connectex: No connection could be made because the target machine actively refused it.
+===== 汇总结束 =====
+
+INFO: 2025/09/20 16:11:50 send.go:97: 
+===== 请求汇总日志 =====
+请求方法: POST
+请求URL: http://localhost:8085/aaa
+请求头: map[Content-Type:[application/json] Key:[test]]
+请求体: {"user":"123"}
+总请求数: 1000
+成功: 991, 失败: 9
+去重后的响应结果:
+  状态码: 200, 响应体: {"test":"success"}
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": dial tcp [::1]:8085: connectex: No connection could be made because the target machine actively refused it.
+===== 汇总结束 =====
+
+INFO: 2025/09/20 16:11:51 send.go:97: 
+===== 请求汇总日志 =====
+请求方法: POST
+请求URL: http://localhost:8085/aaa
+请求头: map[Content-Type:[application/json] Key:[test]]
+请求体: {"user":"123"}
+总请求数: 1000
+成功: 995, 失败: 5
+去重后的响应结果:
+  状态码: 200, 响应体: {"test":"success"}
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": dial tcp [::1]:8085: connectex: No connection could be made because the target machine actively refused it.
+===== 汇总结束 =====
+
+INFO: 2025/09/20 16:11:52 send.go:97: 
+===== 请求汇总日志 =====
+请求方法: POST
+请求URL: http://localhost:8085/aaa
+请求头: map[Content-Type:[application/json] Key:[test]]
+请求体: {"user":"123"}
+总请求数: 1000
+成功: 980, 失败: 20
+去重后的响应结果:
+  状态码: 200, 响应体: {"test":"success"}
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": dial tcp [::1]:8085: connectex: No connection could be made because the target machine actively refused it.
+===== 汇总结束 =====
+
+INFO: 2025/09/20 16:12:06 send.go:97: 
+===== 请求汇总日志 =====
+请求方法: POST
+请求URL: http://localhost:8085/aaa
+请求头: map[Content-Type:[application/json] Key:[test]]
+请求体: {"user":"123"}
+总请求数: 1000
+成功: 1000, 失败: 0
+去重后的响应结果:
+  状态码: 200, 响应体: {"test":"success"}
+===== 汇总结束 =====
+
+INFO: 2025/09/20 16:13:48 send.go:97: 
+===== 请求汇总日志 =====
+请求方法: POST
+请求URL: http://localhost:8085/aaa
+请求头: map[Content-Type:[application/json] Key:[test]]
+请求体: {"user":"123"}
+总请求数: 10000
+成功: 10000, 失败 : 0
+去重后的响应结果:
+  状态码: 200, 响应体: {"test":"success"}
+===== 汇总结束 =====
+
+INFO: 2025/09/20 16:14:04 send.go:97: 
+===== 请求汇总日志 =====
+请求方法: POST
+请求URL: http://localhost:8085/aaa
+请求头: map[Content-Type:[application/json] Key:[test]]
+请求体: {"user":"123"}
+总请求数: 10000
+成功: 10000, 失败: 0
+去重后的响应结果:
+  状态码: 200, 响应体: {"test":"success"}
+===== 汇总结束 =====
+
+INFO: 2025/09/21 15:36:05 send.go:99: 
+===== 请求汇总日志 =====
+请求方法: POST
+请求URL: http://localhost:8085/aaa
+请求头: map[Content-Type:[application/json] Key:[test]]
+请求体: {"user":"123"}
+总请求数: 10000
+成功: 0, 失败: 10000
+去重后的响应结果:
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": context deadline exceeded
+===== 汇总结束 =====
+
+INFO: 2025/09/21 15:39:21 send.go:99: 
+===== 请求汇总日志 =====
+请求方法: POST
+请求URL: http://localhost:8085/aaa
+请求头: map[Content-Type:[application/json] Key:[test]]
+请求体: {"user":"123"}
+总请求数: 10000
+成功: 0, 失败: 10000
+去重后的响应结果:
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56218->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56314->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56351->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56238->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56332->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56349->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56392->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56244->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56375->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56303->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56385->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56232->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56247->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56254->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56268->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56295->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56307->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56319->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56347->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56205->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56209->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56250->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56235->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56269->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56304->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56283->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56359->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56228->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56301->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56251->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56306->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56293->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56226->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56258->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56340->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56243->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56262->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56221->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56260->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56379->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56356->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56377->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56368->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56231->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56330->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56219->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56334->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56341->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56337->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56388->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56390->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56203->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56230->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56214->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56312->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56329->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56386->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56393->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56199->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56211->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56208->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56275->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56302->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56363->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56370->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56378->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56202->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56223->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56289->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56225->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56284->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56383->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56348->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56317->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56261->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56248->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56213->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56299->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56342->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56354->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56366->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56217->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56277->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56276->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56350->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56326->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56335->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56344->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56353->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56255->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56233->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56245->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56263->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56315->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56300->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56372->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56381->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56242->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56273->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56331->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56352->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56380->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56322->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56241->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56207->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56298->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56274->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56288->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56287->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56339->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56333->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56313->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56364->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56343->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56373->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": context deadline exceeded
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56220->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56282->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56325->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56249->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56305->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56361->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56367->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56216->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56224->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56237->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56297->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56196->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56246->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56291->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56384->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56206->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56272->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56281->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56374->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56345->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56355->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56204->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56294->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56311->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56362->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56198->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56201->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56212->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56285->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56346->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56316->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56271->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56369->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56197->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56256->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56266->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56292->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56296->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56358->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56324->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56360->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56234->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56290->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56253->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56320->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56357->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56391->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56257->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56239->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56267->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56215->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56318->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56278->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56371->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56200->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56222->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56265->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56210->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56394->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56365->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56382->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56270->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56240->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56236->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56310->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56338->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": dial tcp [::1]:8085: connectex: No connection could be made because the target machine actively refused it.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56195->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56259->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56264->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56227->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56308->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56376->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56389->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56309->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56328->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56279->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56387->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56280->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56321->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56336->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56286->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56252->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56229->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56327->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": read tcp [::1]:56323->[::1]:8085: wsarecv: An existing connection was forcibly closed by the remote host.
+===== 汇总结束 =====
+
+INFO: 2025/09/21 15:39:40 send.go:99: 
+===== 请求汇总日志 =====
+请求方法: POST
+请求URL: http://localhost:8085/aaa
+请求头: map[Content-Type:[application/json] Key:[test]]
+请求体: {"user":"123"}
+总请求数: 100
+成功: 0, 失败: 100
+去重后的响应结果:
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": context deadline exceeded
+===== 汇总结束 =====
+
+INFO: 2025/09/21 15:41:21 send.go:99: 
+===== 请求汇总日志 =====
+请求方法: POST
+请求URL: http://localhost:8085/aaa
+请求头: map[Content-Type:[application/json] Key:[test]]
+请求体: {"user":"123"}
+总请求数: 100
+成功: 0, 失败: 100
+去重后的响应结果:
+  错误: 发送请求失败: Post "http://localhost:8085/aaa": context deadline exceeded
+===== 汇总结束 =====
+
+INFO: 2025/09/21 15:42:40 send.go:99: 
+===== 请求汇总日志 =====
+请求方法: POST
+请求URL: http://localhost:8085/aaa
+请求头: map[Content-Type:[application/x-www-form-urlencoded] Key:[test]]
+请求体: username=xuhuaqiang
+总请求数: 10
+成功: 10, 失败: 0
+去重后的响应结果:
+  状态码: 200, 响应体: {"test":"success"}
+===== 汇总结束 =====
+
+INFO: 2025/09/21 15:43:49 send.go:99: 
+===== 请求汇总日志 =====
+请求方法: POST
+请求URL: http://localhost:8085/aaa?userid=123
+请求头: map[Content-Type:[application/x-www-form-urlencoded] Key:[test]]
+请求体: username=xuhuaqiang
+总请求数: 10
+成功: 10, 失败: 0
+去重后的响应结果:
+  状态码: 200, 响应体: {"test":"success"}
+===== 汇总结束 =====
+
+INFO: 2025/09/21 15:44:43 send.go:99: 
+===== 请求汇总日志 =====
+请求方法: POST
+请求URL: http://localhost:8085/aaa?userid=123
+请求头: map[Content-Type:[application/x-www-form-urlencoded] Key:[test]]
+请求体: username=xuhuaqiang
+总请求数: 10
+成功: 10, 失败: 0
+去重后的响应结果:
+  状态码: 200, 响应体: {"test":"success"}
+===== 汇总结束 =====
+
+INFO: 2025/09/21 15:46:08 send.go:99: 
+===== 请求汇总日志 =====
+请求方法: POST
+请求URL: http://localhost:8085/aaa?userid=123
+请求头: map[Content-Type:[application/x-www-form-urlencoded] Key:[test]]
+请求体: username=xuhuaqiang
+总请求数: 10
+成功: 10, 失败: 0
+去重后的响应结果:
+  状态码: 200, 响应体: {"test":"success"}
+===== 汇总结束 =====
+
+INFO: 2025/09/21 16:18:09 send.go:99: 
+===== 请求汇总日志 =====
+请求方法: POST
+请求URL: http://localhost:8085/aaa?userid=123
+请求头: map[Content-Type:[application/x-www-form-urlencoded] Key:[test]]
+请求体: username=xuhuaqiang
+总请求数: 10
+成功: 10, 失败: 0
+去重后的响应结果:
+  状态码: 200, 响应体: {"test":"success"}
+===== 汇总结束 =====
+
+INFO: 2025/09/23 20:57:56 control.go:20: 绑定参数失败 json: cannot unmarshal array into Go struct field RequestData.files of type map[string]string
+INFO: 2025/09/23 20:58:05 control.go:20: 绑定参数失败 json: cannot unmarshal array into Go struct field RequestData.files of type map[string]string
+INFO: 2025/09/23 20:58:14 control.go:20: 绑定参数失败 json: cannot unmarshal array into Go struct field RequestData.files of type map[string]string
+INFO: 2025/09/23 20:59:08 control.go:20: 绑定参数失败 json: cannot unmarshal array into Go struct field RequestData.files of type map[string]string
+INFO: 2025/09/23 20:59:22 control.go:20: 绑定参数失败 json: cannot unmarshal array into Go struct field RequestData.files of type map[string]string
+INFO: 2025/09/23 21:00:47 control.go:20: 绑定参数失败 json: cannot unmarshal array into Go struct field RequestData.files of type map[string]string
+INFO: 2025/09/23 21:00:51 control.go:20: 绑定参数失败 json: cannot unmarshal array into Go struct field RequestData.files of type map[string]string
+INFO: 2025/09/23 21:00:55 control.go:20: 绑定参数失败 json: cannot unmarshal array into Go struct field RequestData.files of type map[string]string
+INFO: 2025/09/23 21:02:35 control.go:20: 绑定参数失败 json: cannot unmarshal array into Go struct field RequestData.files of type map[string]string
+INFO: 2025/09/23 21:03:16 send.go:99: 
+===== 请求汇总日志 =====
+请求方法: POST
+请求URL: http://localhost:8085/aaa?userid=123
+请求头: map[Content-Type:[application/x-www-form-urlencoded] Key:[test]]
+请求体: username=xuhuaqiang
+总请求数: 10
+成功: 10, 失败: 0
+去重后的响应结果:
+  状态码: 200, 响应体: {"test":"success"}
+===== 汇总结束 =====
+
+INFO: 2025/09/23 21:06:46 send.go:99: 
+===== 请求汇总日志 =====
+请求方法: POST
+请求URL: http://localhost:8085/aaa?userid=123
+请求头: map[Content-Type:[application/x-www-form-urlencoded] Key:[test]]
+请求体: username=xuhuaqiang
+总请求数: 10
+成功: 10, 失败: 0
+去重后的响应结果:
+  状态码: 200, 响应体: {"test":"success"}
+===== 汇总结束 =====
+
+INFO: 2025/09/23 21:18:50 send.go:99: 
+===== 请求汇总日志 =====
+请求方法: POST
+请求URL: http://localhost:8085/aaa?userid=123
+请求头: map[Content-Type:[application/x-www-form-urlencoded] Key:[test]]
+请求体: username=xuhuaqiang
+总请求数: 10
+成功: 10, 失败: 0
+去重后的响应结果:
+  状态码: 200, 响应体: {"test":"success"}
+===== 汇总结束 =====
+
+INFO: 2025/09/23 21:26:17 send.go:99: 
+===== 请求汇总日志 =====
+请求方法: POST
+请求URL: http://localhost:8085/aaa?userid=123
+请求头: map[Content-Type:[application/x-www-form-urlencoded] Key:[test]]
+请求体: username=xuhuaqiang
+总请求数: 10
+成功: 10, 失败: 0
+去重后的响应结果:
+  状态码: 200, 响应体: {"test":"success"}
+===== 汇总结束 =====
+
+INFO: 2025/09/23 21:26:18 send.go:99: 
+===== 请求汇总日志 =====
+请求方法: POST
+请求URL: http://localhost:8085/aaa?userid=123
+请求头: map[Content-Type:[application/x-www-form-urlencoded] Key:[test]]
+请求体: username=xuhuaqiang
+总请求数: 10
+成功: 10, 失败: 0
+去重后的响应结果:
+  状态码: 200, 响应体: {"test":"success"}
+===== 汇总结束 =====
+
+INFO: 2025/09/23 21:35:42 send.go:99: 
+===== 请求汇总日志 =====
+请求方法: POST
+请求URL: http://localhost:8085/aaa?userid%60=111
+请求头: map[Content-Type:[application/json]]
+请求体: {"form":"form"}
+总请求数: 0
+成功: 0, 失败: 0
+去重后的响应结果:
+===== 汇总结束 =====
+
+INFO: 2025/09/23 21:40:01 send.go:99: 
+===== 请求汇总日志 =====
+请求方法: GET
+请求URL: http://localhost:8085/aaa?userid=111
+请求头: map[Content-Type:[application/x-www-form-urlencoded]]
+请求体: form=form
+总请求数: 1
+成功: 0, 失败: 1
+去重后的响应结果:
+  状态码: 404, 响应体: 404 page not found
+===== 汇总结束 =====
+
+INFO: 2025/09/23 21:40:13 send.go:99: 
+===== 请求汇总日志 =====
+请求方法: GET
+请求URL: http://localhost:8085/aaa?userid=111
+请求头: map[Content-Type:[application/x-www-form-urlencoded]]
+请求体: form=form
+总请求数: 1
+成功: 0, 失败: 1
+去重后的响应结果:
+  状态码: 404, 响应体: 404 page not found
+===== 汇总结束 =====
+
+INFO: 2025/09/23 21:42:42 send.go:99: 
+===== 请求汇总日志 =====
+请求方法: GET
+请求URL: http://localhost:8085/aaa?userid=111
+请求头: map[Content-Type:[application/x-www-form-urlencoded]]
+请求体: form=form
+总请求数: 10
+成功: 0, 失败: 10
+去重后的响应结果:
+  状态码: 404, 响应体: 404 page not found
+===== 汇总结束 =====
+
+INFO: 2025/09/23 21:43:55 send.go:99: 
+===== 请求汇总日志 =====
+请求方法: POST
+请求URL: http://localhost:8085/aaa?userid=111
+请求头: map[Content-Type:[application/x-www-form-urlencoded]]
+请求体: form=form
+总请求数: 10
+成功: 10, 失败: 0
+去重后的响应结果:
+  状态码: 200, 响应体: {"test":"success"}
+===== 汇总结束 =====
+
+INFO: 2025/09/24 15:19:48 send.go:99: 
+===== 请求汇总日志 =====
+请求方法: GET
+请求URL: localhost:8085/aaa
+请求头: map[Content-Type:[application/x-www-form-urlencoded]]
+请求体: form=form
+总请求数: 100
+成功: 0, 失败: 100
+去重后的响应结果:
+  错误: 发送请求失败: Get "localhost:8085/aaa": unsupported protocol scheme "localhost"
+===== 汇总结束 =====
+
+INFO: 2025/09/24 15:20:02 send.go:99: 
+===== 请求汇总日志 =====
+请求方法: POST
+请求URL: localhost:8085/aaa
+请求头: map[Content-Type:[application/x-www-form-urlencoded]]
+请求体: form=form
+总请求数: 100
+成功: 0, 失败: 100
+去重后的响应结果:
+  错误: 发送请求失败: Post "localhost:8085/aaa": unsupported protocol scheme "localhost"
+===== 汇总结束 =====
+
+INFO: 2025/09/24 15:20:26 send.go:99: 
+===== 请求汇总日志 =====
+请求方法: POST
+请求URL: http://localhost:8085/aaa
+请求头: map[Content-Type:[application/x-www-form-urlencoded]]
+请求体: form=form
+总请求数: 100
+成功: 100, 失败: 0
+去重后的响应结果:
+  状态码: 200, 响应体: {"test":"success"}
+===== 汇总结束 =====
+
+INFO: 2025/09/24 15:20:51 send.go:99: 
+===== 请求汇总日志 =====
+请求方法: POST
+请求URL: http://localhost:8085/aaa
+请求头: map[Content-Type:[application/x-www-form-urlencoded]]
+请求体: form=form
+总请求数: 10
+成功: 10, 失败: 0
+去重后的响应结果:
+  状态码: 200, 响应体: {"test":"success"}
+===== 汇总结束 =====
+
+INFO: 2025/09/24 15:25:00 send.go:99: 
+===== 请求汇总日志 =====
+请求方法: POST
+请求URL: http://localhost:8085/aaa
+请求头: map[Content-Type:[application/x-www-form-urlencoded]]
+请求体: form=form
+总请求数: 100
+成功: 100, 失败: 0
+去重后的响应结果:
+  状态码: 200, 响应体: {"test":"success"}
+===== 汇总结束 =====
+
+INFO: 2025/09/24 15:26:47 send.go:99: 
+===== 请求汇总日志 =====
+请求方法: POST
+请求URL: http://localhost:8085/aaa
+请求头: map[Content-Type:[application/x-www-form-urlencoded]]
+请求体: form=form
+总请求数: 100
+成功: 52, 失败: 48
+去重后的响应结果:
+  状态码: 400, 响应体: {"msg":"something went wrong","status":"error"}
+  状态码: 200, 响应体: {"msg":"request ok","status":"success"}
+===== 汇总结束 =====
+
+INFO: 2025/09/24 15:44:18 send.go:99: 
+===== 请求汇总日志 =====
+请求方法: POST
+请求URL: http://localhost:8085/aaa
+请求头: map[Content-Type:[application/x-www-form-urlencoded]]
+请求体: form=form
+总请求数: 100
+成功: 61, 失败: 39
+去重后的响应结果:
+  状态码: 400, 响应体: {"msg":"something went wrong","status":"error"}
+  状态码: 200, 响应体: {"msg":"request ok","status":"success"}
+===== 汇总结束 =====
+
+INFO: 2025/09/24 15:44:18 send.go:99: 
+===== 请求汇总日志 =====
+请求方法: POST
+请求URL: http://localhost:8085/aaa
+请求头: map[Content-Type:[application/x-www-form-urlencoded]]
+请求体: form=form
+总请求数: 100
+成功: 40, 失败: 60
+去重后的响应结果:
+  状态码: 400, 响应体: {"msg":"something went wrong","status":"error"}
+  状态码: 200, 响应体: {"msg":"request ok","status":"success"}
+===== 汇总结束 =====
+
